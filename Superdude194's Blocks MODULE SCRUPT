@@ -1,0 +1,11 @@
+local Block = {}
+Block.__index = Block
+
+function Block.new(Hardness)
+	local newBlock = {
+		Hardness = Hardness
+	}
+	return setmetatable(newBlock, Block)
+end
+
+return Block
